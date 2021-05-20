@@ -9,7 +9,7 @@ bot.on('message', (message) => {
 		var ora = data.getHours();
 		var minuto = data.getMinutes();
 
-		message.channel.send('ORARIO ATTUALE :alarm_clock::' + ora + ':' + minuto);
+		message.channel.send('ORARIO ATTUALE :alarm_clock:: ' + ora + ':' + minuto);
     } if (message.content == 'mi senti?') {
         console.log(message.author.id)
         if (message.author.id == '493453529109889025' || message.author.id == '434435376250224650' || message.author.id == '691221421111902209') { //find isma code
