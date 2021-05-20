@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-bot.login('ODQ0ODY0ODc3MzYxMTAyODQ4.YKYnuw.q7wuUNKwi7kMlsHQu0Tij4i63A0');
+bot.login(process.env.token);
 
 bot.on('message', (message) => {
     if (message.content == "!time") {
