@@ -19,24 +19,24 @@ bot.on('message', (message) => {
     } else if (listMessageContent.splice(0, 9).join("") == "!roulette") {
         //play roulette function
         var pick = listMessageContent.splice(10, listMessageContent.length)
-        roulette(pick).then(response => {
-            message.channel.send(response)
-        })
+        roulette(pick)
     }
 })
 
 function roulette(bet) { //bet: black, red, or green
     //37 caselle: num.0 è verde, i pari sono neri e i dispari sono rossi
     var chosenBox = Math.floor(Math.random()*10)
+    var result = "";
     if (bet == "green" && chosenBox == 0) {
-        return ("You won! :chart_with_upwards_trend: :rocket:")
+        result = "You won! :chart_with_upwards_trend: :rocket:"
     } else if (bet == "black" && chosenBox%2 == 0) {
-        return ("You won! :chart_with_upwards_trend: :rocket:")
+        result = "You won! :chart_with_upwards_trend: :rocket:"
     } else if (bet == "red" && chosenBox%2 != 0) {
-        return ("You won! :chart_with_upwards_trend: :rocket:")
+        result = "You won! :chart_with_upwards_trend: :rocket:"
     } else {
-        return ("You lost :chart_with_downwards_trend: :poop:")
+        result = "You lost :chart_with_downwards_trend: :poop:"
     }
+    message.channel.send(result)
 }
 
 var date = new Date()
