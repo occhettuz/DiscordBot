@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-//bot.login(process.env.token);
-bot.login("ODQ0ODY0ODc3MzYxMTAyODQ4.YKYnuw.jwHsrHR9Q1tx2Tz7HstlJdF9ITE")
+bot.login(process.env.token);
 
 bot.on('message', (message) => {
     var listMessageContent = message.content.split("")
