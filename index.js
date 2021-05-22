@@ -18,7 +18,7 @@ bot.on('message', (message) => {
         }
     } else if (listMessageContent.splice(0, 9).join("") == "!roulette") {
         //play roulette function
-        var pick = listmessageContent.splice(10, listMessageContent.length)
+        var pick = listMessageContent.splice(10, listMessageContent.length)
         roulette(pick).then(response => {
             message.channel.send(response)
         })
